@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_docs_clone/app/app.dart';
 import 'package:google_docs_clone/app/utils.dart';
 
 void main() {
   setupLogger();
 
-  runApp(const GoogleDocsApp());
+  runApp(const ProviderScope(child: GoogleDocsApp()));
 }
